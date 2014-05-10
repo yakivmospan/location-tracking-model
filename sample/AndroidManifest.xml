@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.defaultproject"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk
+            android:minSdkVersion="8"
+            android:targetSdkVersion="17"/>
+
+
+    <!--Note: If you are using both NETWORK_PROVIDER and GPS_PROVIDER,-->
+    <!--then you need to request only the ACCESS_FINE_LOCATION permission,-->
+    <!--because it includes permission for both providers. -->
+    <!--(Permission for ACCESS_COARSE_LOCATION includes permission only for NETWORK_PROVIDER.)-->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+
+    <application
+            android:allowBackup="true"
+            android:icon="@drawable/ic_launcher"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme">
+        <activity
+                android:name="com.ym.controller.MainActivity1"
+                android:label="MainActivity1">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.ym.controller.MainActivity2"
+                android:label="MainActivity2">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <activity
+                android:name="com.ym.controller.MainActivity3"
+                android:label="MainActivity3">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+
+        <service
+                android:enabled="true"
+                android:exported="false"
+                android:name="com.ym.model.location.LocationService6"/>
+
+        <service
+                android:enabled="true"
+                android:exported="false"
+                android:name="com.ym.model.location.LocationService2"/>
+
+        <service
+                android:enabled="true"
+                android:exported="false"
+                android:name="com.ym.model.location.LocationService1"/>
+
+    </application>
+
+</manifest>
